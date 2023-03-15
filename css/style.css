@@ -1,0 +1,209 @@
+/*Estilos generales*/
+.titulo {
+    font-family: 'Amatic SC', cursive;
+}
+
+.subtitulo {
+    font-family: 'Dancing Script', cursive;
+    color: #9f5a34;
+}
+
+.parrafo {
+    font-family: 'Crimson Text', serif;
+}
+
+/*Menú*/
+.navbar-brand {
+    width: 200px;
+}
+
+.navbar-brand>img {
+    width: 100%;
+}
+
+.nav-link {
+    font-family: 'Crimson Text', serif;
+}
+
+.nav-link:hover {
+    color: #9f5a34;
+    transition: 0.2s;
+}
+
+.ver-carrito {
+    cursor: pointer;
+}
+
+/*Carrousel*/
+.carousel-item {
+    height: 300px;
+}
+
+.primer-item {
+    background-image: url(../assets/almendra2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.segundo-item {
+    background-image: url(../assets/coco2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.tercer-item {
+    background-image: url(../assets/nuez2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*Historia*/
+.historia {
+    background: linear-gradient(to right, #feedaa, #ffffff);
+}
+
+.img-historia {
+    width: 300px;
+    height: 200px;
+    box-shadow: 0px 0px 6px #9f5a34;
+}
+
+.img-historia>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Tienda*/
+.card {
+    width: 90%;
+}
+
+.card>img {
+    object-fit: cover;
+    height: 250px;
+}
+
+.btn-agregar {
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    background-color: #9f5a34;
+    color: #fff;
+    border-style: none;
+}
+
+/*Carrito*/
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+    background-color: #fff;
+}
+
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #feedaa;
+    padding: 0 20px;
+}
+
+.btn-modal,
+.btn-eliminar {
+    border-style: none;
+    border-radius: 50%;
+    background-color: #ffc120;
+    color: #fff;
+}
+
+.modal-container>.modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+}
+
+.modal-content>img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.total-content {
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sumar,
+.restar {
+    border-style: none;
+    background-color: #fff;
+    color: #9f5a34;
+    font-weight: 700;
+}
+
+.btn-finalizar{
+    background-color: #9f5a34;
+    color: #fff;
+    border-style: none;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.btn-finalizar:hover, .btn-agregar:hover, .btn-form:hover{
+    background-color: #633720;
+    transition: 0.8s;
+}
+/*Contacto*/
+.contacto,
+.footer {
+    background: linear-gradient(to right, #ffc120, #feedaa);
+}
+
+form>input {
+    font-family: 'Crimson Text', serif;
+    border: 2px solid #9f5a34
+}
+
+.btn-form {
+    font-family: 'Crimson Text', serif;
+    background-color: #9f5a34;
+    color: #fff;
+    border-style: none;
+}
+
+/*Responsive*/
+@media (min-width: 576px) {
+    .texto-historia {
+        width: 40%;
+
+    }
+
+    .card {
+        width: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-container>.modal-content {
+        flex-direction: column;
+    }
+}

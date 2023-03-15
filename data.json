@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "img": "../assets/maicena.jpg",
+        "nombre": "Maicena",
+        "unidades": "6 unidades",
+        "precio": 500,
+        "cantidad":1
+    },
+    {
+        "id": 2,
+        "img": "../assets/nuez.jpg",
+        "nombre": "Nuez",
+        "unidades": "6 unidades",
+        "precio": 600,
+        "cantidad":1
+    },
+    {
+        "id": 3,
+        "img": "../assets/rocklets.jpg",
+        "nombre": "Rocklets",
+        "unidades": "6 unidades",
+        "precio": 600,
+        "cantidad":1
+    },
+    {
+        "id": 4,
+        "img": "../assets/cafe.jpg",
+        "nombre": "Café",
+        "unidades": "6 unidades",
+        "precio": 600,
+        "cantidad":1
+    },
+    {
+        "id": 5,
+        "img": "../assets/coco.jpg",
+        "nombre": "Coco",
+        "unidades": "6 unidades",
+        "precio": 600,
+        "cantidad":1
+    },
+    {
+        "id": 6,
+        "img": "../assets/limon.jpg",
+        "nombre": "Limón",
+        "unidades": "6 unidades",
+        "precio": 600,
+        "cantidad":1
+    },
+    {
+        "id": 7,
+        "img": "../assets/almendra.jpg",
+        "nombre": "Almendrado",
+        "unidades": "6 unidades",
+        "precio": 1000,
+        "cantidad":1
+    },
+    {
+        "id": 8,
+        "img": "../assets/nutella.jpg",
+        "nombre": "Nutella",
+        "unidades": "6 unidades",
+        "precio": 1000,
+        "cantidad":1
+    },
+    {
+        "id": 9,
+        "img": "../assets/frutilla.jpg",
+        "nombre": "Frutilla",
+        "unidades": "6 unidades",
+        "precio": 1000,
+        "cantidad":1
+    },
+    {
+        "id": 10,
+        "img": "../assets/frutosrojos.jpg",
+        "nombre": "Frutos rojos",
+        "unidades": "6 unidades",
+        "precio": 1000,
+        "cantidad":1
+    },
+    {
+        "id": 11,
+        "img": "../assets/cononegro.jpg",
+        "nombre": "Conito negro",
+        "unidades": "6 unidades",
+        "precio": 750,
+        "cantidad":1
+    },
+    {
+        "id": 12,
+        "img": "../assets/conoblanco.jpg",
+        "nombre": "Conito blanco",
+        "unidades": "6 unidades",
+        "precio": 750,
+        "cantidad":1
+    }
+]
