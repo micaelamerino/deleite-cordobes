@@ -58,11 +58,13 @@ const saveLocal = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
+//Suscripción
+const form = document.forms["formulario"];
 const btnSuscripcion = document.getElementById("btnSuscripcion");
 
 function confirmSusc(e) {
   e.preventDefault();
-  const email = document.getElementById("email").value;
+  const email = form.email.value;
   if (email == "") {
     Swal.fire({
         icon: 'error',
@@ -75,6 +77,7 @@ function confirmSusc(e) {
         title: '¡Bienvenido!',
         text: 'Suscripción realizada exitosamente',
       });
-  }
-}
+  };
+  form.reset();
+};
 btnSuscripcion.addEventListener("click", confirmSusc);
