@@ -12,7 +12,7 @@ const getProducts = async () => {
     let content = document.createElement("div");
     content.className = "card text-center";
     content.innerHTML = `
-        <img src= "${product.img}">
+        <img src= "${product.img}" alt="Imágen de ${product.nombre}">
         <h3 class="subtitulo mt-2">${product.nombre}</h3>
         <p class="parrafo">${product.unidades}</p>
         <p class="parrafo">$ ${product.precio}</p>
