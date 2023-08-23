@@ -1,190 +1,236 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deleite Cordobés | Alfajores artesanales</title>
-    <meta name="description" content="Alfajores artesanales de dulce de leche y chocolate, Córdoba capital.">
-    <link rel="shortcut icon" href="./assets/favideleite.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Alfajores artesanales de dulce de leche y chocolate, Córdoba capital."
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/favideleite.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script defer src="./js/bootstrap.bundle.min.js"></script>
     <script defer src="./js/script.js"></script>
     <script defer src="./js/carrito.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/toastify-js" type="text/javascript"></script>
-</head>
+  </head>
 
-<body>
+  <body>
 
-    <!--Menú de navegación-->
-    <header id="index" class="header container pt-2">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid contenedor-menu">
-                <a class="navbar-brand" href="index.html"><img src="./assets/logo.png" alt="Logo de la empresa"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
-                    <ul class="navbar-nav gap-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#historia">HISTORIA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#tienda">TIENDA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACTO</a>
-                        </li>
-                    </ul>
+    <header id="index" class="header fixed-top bg-white pt-2">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid contenedor-menu">
+          <a class="navbar-brand" href="index.html"
+            ><img src="./assets/logo.png" alt="Logo de la empresa"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#historia">HISTORIA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tienda">TIENDA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">CONTACTO</a>
+              </li>
+              <li class="nav-item ver-carrito" id="verCarrito">
+                <div class="nav-link d-flex gap-1">
+                  <div>
+                    <img
+                      src="./assets/carrito.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <p id="cantidadCarrito" class="parrafo">0</p>
+                  </div>
                 </div>
-                <div class="d-flex gap-1 ">
-                    <div>
-                        <img id="verCarrito" class="ver-carrito" src="./assets/carrito.png" alt="">
-                    </div>
-                    <div>
-                        <p id="cantidadCarrito" class="parrafo">0</p>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <!--Carrousel-->
-    <section id="carouselControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item primer-item active" data-bs-interval="2000">
-            </div>
-            <div class="carousel-item segundo-item" data-bs-interval="2000">
-            </div>
-            <div class="carousel-item tercer-item" data-bs-interval="2000">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    <section
+      id="carouselControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div
+          class="carousel-item primer-item active"
+          data-bs-interval="2000"
+        ></div>
+        <div class="carousel-item segundo-item" data-bs-interval="2000"></div>
+        <div class="carousel-item tercer-item" data-bs-interval="2000"></div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </section>
 
-    <!--Historia-->
     <main id="historia" class="container-fluid historia mt-4 pb-3">
-        <div class="text-center pt-2 pb-2">
-            <h1 class="titulo">UN SUEÑO, UNA REALIDAD</h1>
+      <div class="text-center py-3">
+        <h1 class="titulo">Un sueño, una realidad</h1>
+      </div>
+      <div class="d-flex flex-wrap justify-content-evenly align-items-center">
+        <div class="img-historia">
+          <img src="./assets/amasador.jpg" alt="" />
         </div>
-        <div class="d-flex flex-wrap justify-content-evenly align-items-center">
-            <div class="img-historia">
-                <img src="./assets/amasador.jpg" alt="">
-            </div>
-            <div class="texto-historia mt-3">
-                <h3 class="subtitulo">Tradición</h3>
-                <p class="parrafo">En Argentina, el alfajor es la "golosina" por excelencia, el elegido por muchos...
-                    como merienda o postre, nunca falla. Esta es una tradición que se mantiene desde hace décadas, y
-                    nosotros queremos formar parte de la historia.</p>
-            </div>
+        <div class="texto-historia mt-3">
+          <h3 class="subtitulo">Tradición</h3>
+          <p class="parrafo">
+            En Argentina, el alfajor es la "golosina" por excelencia, el elegido
+            por muchos... como merienda o postre, nunca falla. Esta es una
+            tradición que se mantiene desde hace décadas, y nosotros queremos
+            formar parte de la historia.
+          </p>
         </div>
-        <div class="d-flex flex-wrap justify-content-evenly align-items-center mt-3">
-            <div class="img-historia">
-                <img src="./assets/tamizar.jpg" alt="">
-            </div>
-            <div class="texto-historia mt-3">
-                <h3 class="subtitulo">Artesanal</h3>
-                <p class="parrafo">Este negocio inició hace 3 años, durante la pandemia, como un sueño tímido, con
-                    muchas incertidumbres, en la cocina de un hogar como cualquier otro. Todo fue, desde el momento 0,
-                    elaborado con nuestras manos... desde el dulce de leche, hasta las tapitas para los alfajores. Poco
-                    a poco, y gracias a ustedes, ese sueño fue creciendo, hasta abrir nuestro primer local. Para
-                    nosotros es primordial mantener siempre
-                    la característica artesanal de nuestros productos, ese toque especial que con sólo un bocado nos
-                    hace sentir como en casa.</p>
-            </div>
+      </div>
+      <div
+        class="d-flex flex-wrap justify-content-evenly align-items-center mt-3"
+      >
+        <div class="img-historia">
+          <img src="./assets/tamizar.jpg" alt="" />
         </div>
-        <div class="d-flex flex-wrap justify-content-evenly align-items-center mt-3">
-            <div class="img-historia">
-                <img src="./assets/masa.jpg" alt="">
-            </div>
-            <div class="texto-historia mt-3">
-                <h3 class="subtitulo">Sin fronteras</h3>
-                <p class="parrafo">Hoy día no existen límites para nuestros sueños, queremos llegar al paladar de todos
-                    los argentinos, y por qué no más allá? Crecemos poco a poco, el camino no es fácil, pero tampoco
-                    imposible. Nos encantaría tener alcance global y que muchas personas puedan vivir la experiencia
-                    Deleite, que sientan la pasión de nuestro trabajo a través del sabor.</p>
-            </div>
+        <div class="texto-historia mt-3">
+          <h3 class="subtitulo">Artesanal</h3>
+          <p class="parrafo">
+            Este negocio inició hace 3 años, durante la pandemia, como un sueño
+            tímido, con muchas incertidumbres, en la cocina de un hogar como
+            cualquier otro. Todo fue, desde el momento 0, elaborado con nuestras
+            manos... desde el dulce de leche, hasta las tapitas para los
+            alfajores. Poco a poco, y gracias a ustedes, ese sueño fue
+            creciendo, hasta abrir nuestro primer local. Para nosotros es
+            primordial mantener siempre la característica artesanal de nuestros
+            productos, ese toque especial que con sólo un bocado nos hace sentir
+            como en casa.
+          </p>
         </div>
+      </div>
+      <div
+        class="d-flex flex-wrap justify-content-evenly align-items-center mt-3"
+      >
+        <div class="img-historia">
+          <img src="./assets/masa.jpg" alt="" />
+        </div>
+        <div class="texto-historia mt-3">
+          <h3 class="subtitulo">Sin fronteras</h3>
+          <p class="parrafo">
+            Hoy día no existen límites para nuestros sueños, queremos llegar al
+            paladar de todos los argentinos, y por qué no más allá? Crecemos
+            poco a poco, el camino no es fácil, pero tampoco imposible. Nos
+            encantaría tener alcance global y que muchas personas puedan vivir
+            la experiencia Deleite, que sientan la pasión de nuestro trabajo a
+            través del sabor.
+          </p>
+        </div>
+      </div>
     </main>
 
-    <!--Tienda-->
     <div id="tienda" class="text-center mt-4 mb-3">
-        <h1 class="titulo">CONOCÉ NUESTRAS DELICIAS</h1>
-        <p class="parrafo">¡En compras superiores a $5000 tenés envío gratis!</p>
+      <h1 class="titulo">Conocé nuestras delicias</h1>
+      <p class="parrafo">¡En compras superiores a $5000 tenés envío gratis!</p>
     </div>
-    <section id="contentCards" class="mt-2 d-flex flex-wrap justify-content-evenly gap-2">
-    </section>
+    <section
+      id="contentCards"
+      class="mt-2 d-flex flex-wrap justify-content-evenly gap-3"
+    ></section>
 
-    <section id="modalContainer" class="modal-container">
-    </section>
+    <section id="modalContainer" class="modal-container"></section>
 
-    <!--Contacto-->
-    <section class="contacto d-flex flex-wrap p-4 justify-content-around mt-4">
-        <div class="text-center">
-            <a href="#index"><img src="./assets/flecha.png" alt=""></a>
-            <h5 class="titulo">inicio</h5>
+    <footer id="contacto" class="mt-5 pt-4">
+      <section class="d-flex flex-wrap justify-content-evenly gap-2">
+        <div class="d-flex flex-wrap justify-content-center gap-3 text-center">
+          <div>
+            <h4 class="subtitulo">Dirección:</h4>
+            <p class="parrafo">Calle y numeración</p>
+          </div>
+          <div>
+            <h4 class="subtitulo">Contacto:</h4>
+            <p class="parrafo">correoelectronico@mail.com</p>
+            <p class="parrafo">Número de teléfono</p>
+          </div>
+          <div>
+            <h4 class="subtitulo">Horario:</h4>
+            <p class="parrafo">Lunes a Sábados de 10 a 18hs.</p>
+          </div>
         </div>
-        <div class="d-flex flex-wrap gap-4">
-            <div>
-                <h3 class="subtitulo">Dirección:</h3>
-                <p class="parrafo">Calle y numeración</p>
-            </div>
-            <div>
-                <h3 class="subtitulo">Contacto:</h3>
-                <p class="parrafo">correoelectronico@mail.com</p>
-                <p class="parrafo">Número de teléfono</p>
-            </div>
-            <div>
-                <h3 class="subtitulo">Horario:</h3>
-                <p class="parrafo">Lunes a Sábados de 10 a 18hs.</p>
-            </div>
-        </div>
+
         <div>
-            <h3 class="titulo">¡Suscribite y recibí las ofertas semanales!</h3>
-            <form name="formulario">
-                <label for="emal"></label>
-                <input type="email" name="email" placeholder="Ingrese su email">
-                <button type="submit" id="btnSuscripcion" class="btn-form">Suscribirme</button>
-            </form>
+          <h4 class="titulo text-center">¡Suscribite para recibir las ofertas!</h4>
+          <form name="formulario" class="d-flex flex-wrap justify-content-center gap-2">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ingrese su email"
+            />
+            <button type="submit" id="btnSuscripcion" class="btn-form">
+              Suscribirme
+            </button>
+          </form>
         </div>
 
-    </section>
-
-    <!--Footer-->
-    <footer class="footer container-fluid d-flex flex-wrap justify-content-between">
         <div>
-            <p class="parrafo">&copy;Deleite Cordobés - 2023 - Todos los derechos reservados</p>
+          <h4 class="titulo">Nuestras redes</h4>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="https://www.instagram.com/" target="_blank"
+              ><img src="./assets/instagram.png" alt=""
+            /></a>
+            <a href="https://web.whatsapp.com/" target="_blank"
+              ><img src="./assets/whatsapp.png" alt=""
+            /></a>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><img src="./assets/facebook.png" alt=""
+            /></a>
+          </div>
         </div>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-            <div>
-                <a href="https://www.instagram.com/" target="_blank"><img src="./assets/instagram.png" alt=""></a>
-            </div>
-            <div>
-                <a href="https://web.whatsapp.com/" target="_blank"><img src="./assets/whatsapp.png" alt=""></a>
-            </div>
-            <div>
-                <a href="https://www.facebook.com/" target="_blank"><img src="./assets/facebook.png" alt=""></a>
-            </div>
-        </div>
+      </section>
+
+      <div class="text-center py-3">
+        <p class="parrafo">
+          &copy;Deleite Cordobés - Todos los derechos reservados
+        </p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

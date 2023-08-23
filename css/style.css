@@ -1,20 +1,47 @@
-/*Estilos generales*/
-.titulo {
-    font-family: 'Amatic SC', cursive;
+@font-face {
+    font-family: DancingScript;
+    src: url('/fonts/DancingScript-Regular.ttf');
 }
 
+@font-face {
+    font-family: CrimsonPro;
+    src: url('/fonts/CrimsonPro-Regular.ttf');
+}
+
+:root{
+    --marron: #9f5a34;
+    --marron-claro: #cc7242;
+    --amarillo: #ffc120;
+    --claro: #feedaa;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo ,
 .subtitulo {
-    font-family: 'Dancing Script', cursive;
-    color: #9f5a34;
+    font-family: DancingScript;
+    color: var(--marron);
+    font-display: swap;
 }
 
 .parrafo {
-    font-family: 'Crimson Text', serif;
+    color: #000;
+    font-family: CrimsonPro;
+    font-size: larger;
+    margin-bottom: 0;
+    font-display: swap;
 }
 
 /*Menú*/
+.header {
+    padding: 10px;
+}
 .navbar-brand {
-    width: 200px;
+    width: 180px;
 }
 
 .navbar-brand>img {
@@ -22,53 +49,69 @@
 }
 
 .nav-link {
-    font-family: 'Crimson Text', serif;
+    font-family: CrimsonPro;
+    font-size: larger;
+    position: relative;
 }
 
-.nav-link:hover {
-    color: #9f5a34;
-    transition: 0.2s;
+.nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: var(--amarillo);
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.nav-link:hover:after {
+    width: 100%;
 }
 
 .ver-carrito {
     cursor: pointer;
 }
 
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
 /*Carrousel*/
+
+.carousel {
+    margin-top: 180px
+}
+
 .carousel-item {
     height: 300px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .primer-item {
     background-image: url(../assets/almendra2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 .segundo-item {
     background-image: url(../assets/coco2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 .tercer-item {
     background-image: url(../assets/nuez2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 /*Historia*/
 .historia {
-    background: linear-gradient(to right, #feedaa, #ffffff);
+    background: linear-gradient(to right, var(--claro), #fff);
 }
 
 .img-historia {
     width: 300px;
     height: 200px;
-    box-shadow: 0px 0px 6px #9f5a34;
+    box-shadow: 0px 0px 6px var(--amarillo);
 }
 
 .img-historia>img {
@@ -80,33 +123,50 @@
 /*Tienda*/
 .card {
     width: 90%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 6px #b8b8b8;
+    padding-bottom: 15px;
+    border-radius: 10px;
 }
 
 .card>img {
     object-fit: cover;
     height: 250px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .btn-agregar {
-    font-family: 'Amatic SC', cursive;
-    font-size: x-large;
-    background-color: #9f5a34;
-    color: #fff;
+    font-family: CrimsonPro;
+    font-size: larger;
+    color: var(--claro);
+    background-color: var(--marron);
     border-style: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.btn-agregar:hover{
+    background-color: var(--claro);
+    color: var(--marron);
+    box-shadow: 0px 0px 6px var(--marron);
+    transition: 0.5s;
 }
 
 /*Carrito*/
 .modal-container {
     width: 80%;
     margin: 0 10%;
-    max-height: 88vh;
+    max-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
     overflow: auto;
     z-index: 9;
-    top: 12vh;
+    top: 26vh;
     scrollbar-color: none;
     background-color: #fff;
 }
@@ -119,22 +179,23 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: #feedaa;
+    background-color: var(--claro);
     padding: 0 20px;
 }
 
 .btn-modal,
 .btn-eliminar {
     border-style: none;
-    border-radius: 50%;
-    background-color: #ffc120;
+    background-color: var(--amarillo);
     color: #fff;
+    padding: 1px 8px;
+    border-radius: 5px;
 }
 
 .modal-container>.modal-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 70%;
     margin: 10px;
@@ -157,44 +218,49 @@
 .restar {
     border-style: none;
     background-color: #fff;
-    color: #9f5a34;
+    color: var(--marron);
     font-weight: 700;
 }
 
 .btn-finalizar{
-    background-color: #9f5a34;
+    background-color: var(--marron);
     color: #fff;
     border-style: none;
     padding: 5px;
     margin-bottom: 10px;
 }
-.btn-finalizar:hover, .btn-agregar:hover, .btn-form:hover{
-    background-color: #633720;
-    transition: 0.8s;
-}
-/*Contacto*/
-.contacto,
-.footer {
-    background: linear-gradient(to right, #ffc120, #feedaa);
+
+/*Footer*/
+footer {
+    background: linear-gradient(to right, var(--amarillo), var(--claro));
 }
 
 form>input {
     font-family: 'Crimson Text', serif;
-    border: 2px solid #9f5a34
+    border-style: none;
+    box-shadow: 0px 0px 6px var(--marron);
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 
 .btn-form {
     font-family: 'Crimson Text', serif;
-    background-color: #9f5a34;
-    color: #fff;
+    color: var(--claro);
+    background-color: var(--marron);
     border-style: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.btn-form:hover{
+    background-color: var(--marron-claro);
+    transition: 0.5s;
 }
 
 /*Responsive*/
 @media (min-width: 576px) {
     .texto-historia {
         width: 40%;
-
     }
 
     .card {
@@ -202,8 +268,28 @@ form>input {
     }
 }
 
+@media (min-width: 992px) {
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+    .navbar > .contenedor-menu {
+        display: flex;
+        gap:10px;
+    }
+    .navbar-nav {
+        gap: 60px;
+    }
+}
+
 @media (max-width: 768px) {
+
+    .modal-container {
+        top: 26vh;
+    }
     .modal-container>.modal-content {
         flex-direction: column;
     }
+
 }
+
